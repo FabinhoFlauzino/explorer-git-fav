@@ -7,20 +7,22 @@
 
 :root {
   font-size: 62.5%;
-  
+
   --black: #000;
   --white: #FFFFFF;
   --text-color: #E1E1E6;
   --red: #F75A68;
   --gray: #7C7C8A;
   --blue-dark: #092D38;
-  --bg-table-1: #06161B80;
-  --bg-table-2: #06181C;
+  --bg-1: #06161B80;
+  --bg-2: #06181C;
   --border-color: #4A808C;
 }
 
 body {
   font-size: 1.6rem;
+  background-color: var(--black);
+  color: var(--text-color);
 }
 
 .sr-only {
@@ -33,4 +35,49 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+#app {
+  max-width: 112rem;
+  width: 100%;
+  margin: 11.5rem auto;
+  padding: 2rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.search input {
+  width: 46.2rem;
+  height: 4.8rem;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  background-color: var(--bg-2);
+  border: none;
+  color: var(--text-color);
+  border-radius: .5rem;
+}
+
+.search button {
+  height: 4.8rem;
+  width: 17rem;
+  padding: 1.2rem 3.2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background-color: var(--border-color);
+  border: none;
+  border-radius: .5rem;
 }
