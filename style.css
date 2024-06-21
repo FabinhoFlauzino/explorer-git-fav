@@ -112,6 +112,7 @@ button{
   margin-top: 8rem;
   border: 1px solid var(--border-color);
   border-radius: 1.2rem;
+  overflow: hidden;
 }
 
 table {
@@ -119,9 +120,8 @@ table {
   width: 100%;
 }
 
-table thead,
-table tr {
-  border-bottom: 1px solid var(--border-color);
+table tbody tr {
+  border-top: 1px solid var(--border-color);
 }
 
 table tr:last-child {
@@ -200,4 +200,50 @@ table td button {
   background: transparent;
   border: 0;
   color: var(--red);
+}
+
+.message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.message.success {
+  background-color: #28a745;
+}
+
+.message.error {
+  background-color: #dc3545;
+}
+
+/* Animação de fade-in para mensagens */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+.message {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação para adição de linhas na tabela */
+@keyframes rowFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+tbody tr {
+  animation: rowFadeIn 0.5s ease-in-out;
 }
