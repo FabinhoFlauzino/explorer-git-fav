@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -108,8 +108,8 @@ button{
   fill: var(--border-color)
 }
 
-.table{
-  margin-top: 8rem;
+.table {
+  margin-top: 6rem;
   border: 1px solid var(--border-color);
   border-radius: 1.2rem;
   overflow: hidden;
@@ -166,7 +166,7 @@ table tr:nth-child(even) {
   background-color: var(--bg-2);
 }
 
-table td.user-info{
+table td.user-info {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -225,6 +225,7 @@ table td button {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 0.9;
   }
@@ -239,6 +240,7 @@ table td button {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -246,4 +248,20 @@ table td button {
 
 tbody tr {
   animation: rowFadeIn 0.5s ease-in-out;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  min-height: 62.4rem;
+  background: #030B0D;
+  color: #4E5455;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+.table-footer.d-none {
+  display: none;
 }

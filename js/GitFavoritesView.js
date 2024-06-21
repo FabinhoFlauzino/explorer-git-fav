@@ -27,6 +27,12 @@ export class GitFavoritesView extends GitFavorites {
   update() {
     this.removeAllTr();
 
+    if(this.entries.length >= 1){
+      document.querySelector(".table-footer").classList.add("d-none")
+    } else {
+      document.querySelector(".table-footer").classList.remove("d-none")
+    }
+
     this.entries.forEach(user => {
       const row = this.createRow();
 
@@ -68,7 +74,10 @@ export class GitFavoritesView extends GitFavorites {
   }
 
   removeAllTr() {
-    this.tbody.querySelectorAll("tr").forEach(tr => tr.remove());
+    const tr = this.tbody.querySelectorAll("tr")
+    tr.forEach(tr => {
+      tr.remove()
+    });
   }
 
   showMessage(message, type) {
