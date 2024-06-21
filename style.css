@@ -25,6 +25,14 @@ body {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -40,7 +48,7 @@ body {
 #app {
   max-width: 112rem;
   width: 100%;
-  margin: 11.5rem auto;
+  margin: 4rem auto;
   padding: 2rem;
 }
 
@@ -80,4 +88,116 @@ body {
   background-color: var(--border-color);
   border: none;
   border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  color: white;
+  transition: background .3s;
+}
+
+.search button svg path {
+  fill: white
+}
+
+.search button:hover {
+  color: var(--border-color);
+  background: var(--white);
+}
+
+.search button:hover svg path {
+  fill: var(--border-color)
+}
+
+.table{
+  margin-top: 8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead,
+table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+table thead {
+  background: var(--blue-dark);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+table td,
+table th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  text-align: left;
+}
+
+table thead th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table thead th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+table tbody * {
+  font-size: 2rem;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--bg-1);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-2);
+}
+
+table td.user-info{
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+table td.user-info img {
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+table td.user-info a {
+  color: var(--text-color);
+  transition: brightness .3s;
+}
+
+table td button:hover,
+table td.user-info a:hover {
+  filter: brightness(1.05);
+}
+
+table td.user-info p {
+  font-weight: 700;
+}
+
+table td.user-info span {
+  font-weight: 400;
+}
+
+table td button {
+  background: transparent;
+  border: 0;
+  color: var(--red);
 }
